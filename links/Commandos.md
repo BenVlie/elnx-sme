@@ -14,6 +14,11 @@ ip a show dev (x*eml*x) (voor specifieke interface)
 ip route routing info
 
 
+VirtualBox ip adressen
+ - NAT: IP = 10.0.2.15/24
+ - GW = 10.0.2.2
+ - DNS = 10.0.2.3
+ - ip hostsysteem: Vbox -> file -> preferences -> network -> host-only networks -> hover opties
 belangrijk voor troubleshooting: weten welke ip adressen
 -op NAT interface altijd zelfde ip adres (10.0.0.15/24)
     -default gateway= 10.0.2.2/24
@@ -48,7 +53,7 @@ structuur: systemctl COMMAND [OPTION] ... name
 List all services |systemctl --type=service
 list running services | systemctl --state=running
 list failed services | systemctl --failed
-
+*systemctl enable httpd.service*
 vb: systemctl status mariadb.service
   (opstarten) sudo systemctl (re)start mariadb.service
 
@@ -82,3 +87,41 @@ Persistent changes
 --permanent option => not applied immediately!
 Two methods:
 Execute command once without, once with  --permanent
+
+poortnummer aanpassen: sudo vim /etc/httpd/conf/httpd.conf
+                        sudo systemctl restart httpd
+__Troubleshooting__
+ - volg TCP/IP stack (beneden naar boven)
+  -link layer
+  -internet layer
+  -transport layer
+  -application layer
+- know your network (weet welke waarden(ip adressen, poortnummers) je gaat krijgen)
+
+-checklist link layer
+    - test cables
+    - check switch/NICs LEDs
+    - ip link(=commando)
+    - in Vbox aansluiting adapers controleren
+
+-checklist internet layer
+    - Local settings
+      - ip address: ip a (controleer ook subnets)
+      - default gateway: ip r
+      - DNS service: /etc/resolv.conf
+    - LAN connectivity
+      - ping between hosts
+      - ping default gateway/DNS
+      - query DNS(dig, nslookup, getent) in syllabus troubleshooten DNS server, extra info
+                  nslookup www.hogent.be // nslookup www.google.com (8.8.8.8) // dig www.hogent.be (+short)
+                  reverse lookup : dig -x 178.62.144.90 (@193.190.173.1) (niet alle servers hebben reverse lookup)
+                  getent = basistool // getent ahosts www.google.be
+
+-checklist transport layer
+    - service running? -> sudo systemctl status "SERVICE"
+    - Correct port/interface -> sudo ss -tulpn (-n = poortnummers)
+    - firewallsettings -> sudo firewall-cmd --list-all
+
+-checklist application layer
+    - check the logs: sudo journalctl -f -u "SERVICE"
+    - check config file syntax

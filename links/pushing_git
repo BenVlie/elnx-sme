@@ -1,0 +1,3 @@
+git add .
+git commit --message("message")
+git push
