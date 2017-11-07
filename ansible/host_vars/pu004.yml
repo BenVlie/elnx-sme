@@ -11,11 +11,12 @@ mariadb_users:
   - name: Benjamin
     password: letmein
     priv: wordpress.*:ALL,GRANT
+    state: present
 
-mariadb_root_password: '$1$JQBAoEN0$V3FEuakfKK4w0VrcyvMjM/'
+mariadb_root_password: letmein
 
 wordpress_database: wordpress
-wordpress_user: Ben
+wordpress_user: Benjamin
 wordpress_password: letmein
 
 #add certificates
