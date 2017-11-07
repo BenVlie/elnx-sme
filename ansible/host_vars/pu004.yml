@@ -1,0 +1,23 @@
+---
+rhbase_firewall_allow_services:
+ - http
+ - https
+httpd_scripting: 'php'
+
+mariadb_databases:
+  - name: wordpress
+
+mariadb_users:
+  - name: Benjamin
+    password: letmein
+    priv: wordpress.*:ALL,GRANT
+
+mariadb_root_password: '$1$JQBAoEN0$V3FEuakfKK4w0VrcyvMjM/'
+
+wordpress_database: wordpress
+wordpress_user: Ben
+wordpress_password: letmein
+
+#add certificates
+httpd_SSLCertificateFile: /etc/pki/tls/certs/ca.crt
+httpd_SSLCertificateKeyFile: /etc/pki/tls/private/ca.key

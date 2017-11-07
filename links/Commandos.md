@@ -101,27 +101,47 @@ __Troubleshooting__
 -checklist link layer
     - test cables
     - check switch/NICs LEDs
-    - ip link(=commando)
-    - in Vbox aansluiting adapers controleren
+    - ip link(=commando) (3) (Bij No carrier problemen met kabel)
+    - in Vbox aansluiting adapters controleren (correct ip/subnet) (1)
+    - check kabels aangesloten (2)
 
 -checklist internet layer
     - Local settings
       - ip address: ip a (controleer ook subnets)
-      - default gateway: ip r
-      - DNS service: /etc/resolv.conf
+      - default gateway: ip r (verwacht 10.0.2.2 bij NAT)
+      - DNS service: /etc/resolv.conf (Verwacht 10.0.2.3)
+      - config files enp0s3 enp0s8 /etc/.../ (Als ip adres configuratie er is mag er geen DHCP zijn)
     - LAN connectivity
       - ping between hosts
       - ping default gateway/DNS
       - query DNS(dig, nslookup, getent) in syllabus troubleshooten DNS server, extra info
+        - getent ahosts www.hogent.be
                   nslookup www.hogent.be // nslookup www.google.com (8.8.8.8) // dig www.hogent.be (+short)
                   reverse lookup : dig -x 178.62.144.90 (@193.190.173.1) (niet alle servers hebben reverse lookup)
                   getent = basistool // getent ahosts www.google.be
+* SSH Check (sudo systemctl status ssh)
+*           (sudo firewallcmd --list-all)
+* SSH via Git Bash (ssh vagrant [IP] 192.168.56.42)
 
 -checklist transport layer
     - service running? -> sudo systemctl status "SERVICE"
+                          sudo systemctl start "service"
+                          -> faalt -> sudo journalctl -u (-f) nginx.Service
+                          -> In dit voorbeeld: No such file or directory
+                          -> cd etc/pki/tls/certs/ -> naam niet correct
+                          -> verander config bestand -> sudo vi /etc/nginx/nginx.config
+                          -> verander (in dit voorbeeld) ssh certificate (fix typfout)
     - Correct port/interface -> sudo ss -tulpn (-n = poortnummers)
+      -Verwachte poorten: :80, :443
+       -> in dit voorbeeld fout bij poort (poortnr :8443)
+       -> :8443 aanpassen in config file: sudo vi /etc/nginx/nginx.config
+       -> sudo systemctl restart nginx
     - firewallsettings -> sudo firewall-cmd --list-all
-
+                        -> sudo firewall-cmd --add-service=https
+                        -> sudo firewall-cmd --add-service=https --permanent
+* controleer op andere files nginx -> ls /var/logs
+* er is een error.log en access.logs
+* In error.log -> /usr/share/nginx/html -> (cd) -> permission probleem op index.html of index.php -> ls -Z -> sudo restorecon -R .
 -checklist application layer
     - check the logs: sudo journalctl -f -u "SERVICE"
     - check config file syntax

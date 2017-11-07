@@ -6,6 +6,18 @@ rhbase_repositories:
 rhbase_install_packages:
  - bash-completion
  - vim-enhanced
-rhbase_firewall_allow_services:
- - http
- - https
+ - git
+ - nano
+ - tree
+ - wget
+ - bind-utils
+rhbase_users:
+  - name: benjamin
+    comment: 'Benjamin Van Lierde'
+    groups:
+      - wheel
+    password: '$1$JQBAoEN0$V3FEuakfKK4w0VrcyvMjM/'
+rhbase_user_groups: []
+rhbase_motd: true
+rhbase_ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2pnxPJ2jpLC3B2qgd9asiNXvAVTvriX69+1rtSjeXwb1H2Vh9GxOja1WOKYR/wBuBJKwMidYmI+yKXLNFlRY2DHNcMdXcl4ZElBSvHcTuGZPrmNdB9jmAYsp659cby374UotYvJJ+nCRCu2D+zKT55DNE9qENXKY7+Pli8WJRDVptQxM6m3PKyRsRNtbVuxgzmlEUrjohgW+foBwsJULwP85Mt9JFPJQP8L9pk9MCJXilqysV2fhnYYGjKUi5RGdxXdwLK/NbzeK6dTWIe7oWoN/zT1d29Fxu8Ej2RVBWQefpLHaYHgIxY/8ZBtITQxz/aYEep7c0JyU829hFg+Zr jara-@BVLPC
+rhbase_ssh_user: benjamin
