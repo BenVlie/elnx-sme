@@ -16,9 +16,25 @@
   roles:
     - bertvv.rh-base
     - bertvv.bind
-    
+
 - hosts: pu002
   become: true
   roles:
     - bertvv.rh-base
     - bertvv.bind
+- hosts: pr011
+  become: true
+  roles:
+    - bertvv.rh-base
+    - bertvv.samba
+    - bertvv.vsftpd
+  #post_tasks ACL
+  post_tasks:
+    - name: set ACL (...)
+      acl:
+       path: /srv/shares/public
+       entity: public
+       etype: group
+       permissions: rwx
+       default: yes
+       state: present

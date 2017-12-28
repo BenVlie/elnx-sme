@@ -13,7 +13,7 @@ mariadb_users:
     priv: wordpress.*:ALL,GRANT
     state: present
 
-mariadb_root_password: letmein
+mariadb_root_password: benvlie
 
 wordpress_database: wordpress
 wordpress_user: Benjamin

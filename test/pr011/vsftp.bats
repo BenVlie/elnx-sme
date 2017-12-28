@@ -8,8 +8,8 @@
 # Variables
 #
 sut_ip=172.16.0.11   # IP of the System Under Test
-admin_user=bert      # User with admin privileges
-admin_password=bert
+admin_user=benjamin     # User with admin privileges
+admin_password=benvlie
 testfile="tst${RANDOM}"
 
 # Useful return codes
@@ -317,4 +317,3 @@ assert_no_write_access() {
   assert_no_write_access it         svena         svena
   assert_write_access    it         ${admin_user} ${admin_password}
 }
-
