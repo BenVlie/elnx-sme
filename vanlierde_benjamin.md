@@ -22,9 +22,17 @@ W9:
 - Nog geen laboverslagen geschreven. Graag zsm aanvullen!
 - Bezig met DNS of afgewerkt?
 
+Eindevaluatie:
+
+- Acceptatietests:
+    - LAMP, DNS ok
+    - Fileserver: NIET ok
+        - Wachtwoorden `rhbase_users` in plain text, moeten gehashed zijn
+- Integratie-opdracht niet gerealiseerd
+
 ### Eindbeoordeling
 
-O1: <BEOORDELING>
+O1: Nog niet bekwaam
 
 ## Troubleshooting
 
@@ -57,29 +65,42 @@ Beoordeling: nog niet bekwaam
 
 ### Derde troubleshooting-opdracht
 
-
+Ok
 
 ### Eindbeoordeling
 
-O2: <BEOORDELING>
+O2: Bekwaam
 
 ## Opdracht Actualiteit
 
+Niet gerealiseerd
+
 ### Eindbeoordeling
 
-O3: <BEOORDELING>
+O3: Nog niet bekwaam
 
 ## Rapportering
 
 ### Laboverslagen
 
-R1: <BEOORDELING>
+Geen laboverslagen gevonden.
+
+R1: Nog niet bekwaam
 
 ### Demonstraties
 
-R2: <BEOORDELING>
+Dit aspect kan op dit moment nog niet geëvalueerd worden. Omdat niet alle taken gerealiseerd waren, is het ook niet duidelijk in hoeverre de criteria behaald zijn.
+
+R2: Nog niet bekwaam
 
 ### Cheat sheet
 
-R3: <BEOORDELING>
+Niet bijgehouden
 
+R3: Nog niet bekwaam
+
+## Tweede zittijd
+
+- Hoofdopdracht afwerken
+- Actualiteitsopdracht realiseren
+- Extra opdracht: Webserver met Docker (details op Chamilo)
