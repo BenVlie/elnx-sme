@@ -1,0 +1,31 @@
+# Enterprise Linux Lab Report
+
+- Student name: Benjamin Van Lierde
+- Github repo: <https://github.com/BenVlie/elnx-sme>
+
+The first goal is to apply the role rhbase to the server pu004.
+The second goal is to have a configuration for all hosts that:
+  - Have EPEL repository installed
+  - Have packages (bash-completion, bind-utils, git, nano, tree, vim-enhanced and wget) installed.
+  - Create a administrator account.
+  - Generate a ssh key pair.
+  - Show the network connection after login.
+
+## Test plan
+The first step is to destroy the current pu004 with ´´´vagrant destroy -f pu004´´´ and to reboot with ´´´vagrant up pu004´´´.
+Secondly, log in with ´´´vagrant ssh pu004´´´.
+Now, go to the directory with the test script. ´´´cd /vagrant/test/´´´ and start the test ´´´sudo ./runbats.sh´´´
+All tests from common.bats should be successful.
+
+
+## Procedure/Documentation
+
+It was not difficult to do this part, because there was enough information in the syllabus and on github. One problem was puzzling around so the syntax was correct.
+The hardest part was the ssh key pair. I had trouble locating the files on both host system and server.
+
+## Test report
+
+The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+
+## Resources
+  - https://github.com/bertvv/ansible-role-rh-base

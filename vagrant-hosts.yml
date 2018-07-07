@@ -25,19 +25,5 @@
 #
 # [1] http://docs.vagrantup.com/v2/synced-folders/basic_usage.html
 ---
-- name: pu001
-  ip: 192.0.2.10
-- name: pu002
-  ip: 192.0.2.11
-- name: pu003
-  ip: 192.0.2.20
 - name: pu004
   ip: 192.0.2.50
-- name: pr001
-  ip: 172.16.0.2
-- name: pr002
-  ip: 172.16.0.3
-- name: pr010
-  ip: 172.16.0.10
-- name: pr011
-  ip: 172.16.0.11

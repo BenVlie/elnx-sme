@@ -1,40 +1,24 @@
 # site.yml
 ---
-- hosts: pu004
-  become: true
-  roles:
-    - bertvv.rh-base
-    - bertvv.mariadb
-    - bertvv.httpd
-    - bertvv.wordpress
-  pre_tasks:
-    - copy: src=files/ca.crt dest=/etc/pki/tls/certs
-    - copy: src=files/ca.key dest=/etc/pki/tls/private/ca.key
+  - hosts: pu004
+    become: true
+    roles:
+      - bertvv.rh-base
+#      - bertvv.mariadb
+#      - bertvv.httpd
+#      - bertvv.wordpress
+    pre_tasks:
+      - copy: src=files/ca.crt dest=/etc/pki/tls/certs
+      - copy: src=files/ca.key dest=/etc/pki/tls/private/ca.key
 
-- hosts: pu001
-  become: true
-  roles:
-    - bertvv.rh-base
-    - bertvv.bind
+  - hosts: pu001
+    become: true
+    roles:
+      - bertvv.rh-base
+      - bertvv.bind
 
-- hosts: pu002
-  become: true
-  roles:
-    - bertvv.rh-base
-    - bertvv.bind
-- hosts: pr011
-  become: true
-  roles:
-    - bertvv.rh-base
-    - bertvv.samba
-    - bertvv.vsftpd
-  #post_tasks ACL
-  post_tasks:
-    - name: set ACL (...)
-      acl:
-       path: /srv/shares/public
-       entity: public
-       etype: group
-       permissions: rwx
-       default: yes
-       state: present
+  - hosts: pu002
+    become: true
+    roles:
+      - bertvv.rh-base
+      - bertvv.bind
