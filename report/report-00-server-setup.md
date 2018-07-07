@@ -25,7 +25,7 @@ The hardest part was the ssh key pair. I had trouble locating the files on both 
 
 ## Test report
 
-The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+![testrapport-00](https://github.com/BenVlie/elnx-sme/blob/solution/images/00-testrapport.png)
 
 ## Resources
   - https://github.com/bertvv/ansible-role-rh-base
