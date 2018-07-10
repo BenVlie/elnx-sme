@@ -14,11 +14,7 @@ The second goal is to have a configuration for all hosts that:
 ## Test plan
 The first step is to destroy the current pu004 with ```vagrant destroy -f pu004``` and to reboot with ```vagrant up pu004```.\
 Secondly, log in with ```vagrant ssh pu004```.\
-<<<<<<< HEAD
-Now, go to the directory with the test script. ```cd /vagrant/test/``` and start the test ```sudo ./runbats.sh```
-=======
 Now, go to the directory with the test script. ```cd /vagrant/test/``` and start the test ```sudo ./runbats.sh``` \
->>>>>>> f2f532e781c3fc3fa317437c229ca5066052d089
 All tests from common.bats should be successful.
 
 
