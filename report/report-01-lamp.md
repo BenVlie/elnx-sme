@@ -20,7 +20,7 @@ For the certificates I did research. Even with the information it took some tria
 
 ## Test report
 
-![testrapport-01](https://github.com/BenVlie/elnx-sme/blob/solution/images/01-testrapport.png)
+![testrapport-01](https://github.com/BenVlie/elnx-sme/blob/master/report/images/01-testrapport.png)
 The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
 
 ## Resources
