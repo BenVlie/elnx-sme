@@ -30,6 +30,7 @@ List all sources of useful information that you encountered while completing thi
 - https://github.com/bertvv/ansible-role-httpd
 - https://github.com/bertvv/ansible-role-rh-base
 - https://github.com/bertvv/ansible-role-wordpress
+- https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
 - https://blog.confirm.ch/deploying-ssl-private-keys-with-ansible/
 - https://blog.red-badger.com/blog/2014/02/28/deploying-ssl-keys-securely-with-ansible
 - https://github.com/openmicroscopy/ansible-role-ssl-certificate
