@@ -1,7 +1,7 @@
 # Cheat sheets and checklists
 
 - Student name: Benjamin Van Lierde
-- Github repo: Github.com/BenVLie/elnx-sme
+- Github repo: https://github.com/BenVlie/elnx-sme/
 
 ## Basic commands
 
