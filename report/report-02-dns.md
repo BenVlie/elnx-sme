@@ -3,7 +3,7 @@
 - Student name: Benjamin Van Lierde
 - Github repo: <https://github.com/BenVlie/elnx-sme>
 
-Setting up a webserver with Apache, MariaDB and Wordpress.
+Setting up a master and slave DNS server with BIND.
 ## Test plan
 
 The first step is to destroy the current pu004 with ```vagrant destroy -f pu004``` and to reboot with ```vagrant up pu004```.\
