@@ -11,7 +11,7 @@ Secondly, log in with ```vagrant ssh pu001,002```.\
 Now, go to the directory with the test script. ```cd /vagrant/test/``` and start the test ```sudo ./runbats.sh``` \
 Respectively, the test for masterdns.bats and slavedns.bats should be successful
 
-## Procedure/Documentation
+## Procedure/Documentation4
 
 - The first step is working on the site.yml. I added the role needed for the DNS servers there (bind).
 - The first thing I do is allowing DNS service through the firewall for the master and slave server.
@@ -27,6 +27,10 @@ Respectively, the test for masterdns.bats and slavedns.bats should be successful
 ### Acceptance Tests
 ![testrapport-02a](https://github.com/BenVlie/elnx-sme/blob/master/report/images/02a-testrapport.png)
 ![testrapport-02b](https://github.com/BenVlie/elnx-sme/blob/master/report/images/02b-testrapport.png)
+### nslookup
+![testrapport-02c](https://github.com/BenVlie/elnx-sme/blob/master/report/images/02c-testrapport.png)
+### dig
+![testrapport-02d](https://github.com/BenVlie/elnx-sme/blob/master/report/images/02d-testrapport.png)
 
 ## Resources
 
