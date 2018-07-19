@@ -6,8 +6,8 @@
 
 
 sut_ip=172.16.0.11     # IP of the system under test
-sut_wins_name=FILES    # NetBIOS name
-workgroup=AVALON       # Workgroup
+sut_wins_name=files # NetBIOS name
+workgroup=avalon       # Workgroup
 admin_user=benjamin        # User with admin privileges
 admin_password=benvlie
 

@@ -28,13 +28,18 @@
     - bertvv.rh-base
     - bertvv.samba
     - bertvv.vsftpd
-  #post_tasks ACL
   post_tasks:
-    - name: set ACL (...)
+    - name: IT ACL
       acl:
-       path: /srv/shares/public
-       entity: public
-       etype: group
-       permissions: rwx
-       default: yes
-       state: present
+        path: /srv/shares/it
+        entity: management
+        etype: group
+        permissions: rx
+        state: present
+    - name: Sales ACL
+      acl:
+        path: /srv/shares/sales
+        entity: management
+        etype: group
+        permissions: rx
+        state: present
