@@ -3,6 +3,7 @@
 - Student name: Benjamin Van Lierde
 - Github repo: <https://github.com/BenVlie/elnx-sme>
 
+## Goals
 - Setting up a DHCP server.
 - Setting up a router with VyOS.
 
@@ -34,9 +35,10 @@
 
 ## Test report
 
-![testrapport-04a](https://github.com/BenVlie/elnx-sme/blob/solution/images/04a-testrapport.png)
+![testrapport-04a](https://github.com/BenVlie/elnx-sme/blob/master/report/images/04a-testrapport.png)
 
-![testrapport-04b](https://github.com/BenVlie/elnx-sme/blob/solution/images/04b-testrapport.png)
+![testrapport-04b](https://github.com/BenVlie/elnx-sme/blob/master/report/images/04b-testrapport.png)
 
 ## Resources
-  - https://github.com/bertvv/ansible-role-rh-base
+- https://github.com/bertvv/ansible-role-dhcp
+- https://wiki.vyos.net/wiki/User_Guide
