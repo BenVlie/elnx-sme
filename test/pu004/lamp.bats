@@ -10,7 +10,7 @@
 #}}}
 #{{{ Variables
 sut=192.0.2.50
-mariadb_root_password=letmein
+mariadb_root_password=benvlie
 wordpress_database=wordpress
 wordpress_user=Benjamin
 wordpress_password=letmein

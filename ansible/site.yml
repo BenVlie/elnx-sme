@@ -43,3 +43,8 @@
         etype: group
         permissions: rx
         state: present
+- hosts: pr001
+  become: true
+  roles:
+    - bertvv.rh-base
+    - bertvv.dhcp
