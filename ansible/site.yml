@@ -48,3 +48,16 @@
   roles:
     - bertvv.rh-base
     - bertvv.dhcp
+- hosts: pr010
+  become: true
+  roles:
+    - geerlingguy.docker
+    - geerlingguy.pip
+  pre_tasks:
+    - name: install | libselinux
+      package: name=libselinux-python
+               state=present
+  post_tasks:
+        - name: Command docker-compose up
+          command: /usr/local/bin/docker-compose up -d
+          chdir: /vagrant/ansible

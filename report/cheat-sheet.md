@@ -73,7 +73,29 @@ Simple workflow for a personal project without other contributors:
       - sudo firewall-cmd --list-all
       - sudo firewall-cmd --add-service=xxxxx
       - sudo firewall-cmd --add-service=xxxxx --permanent
-      
+
 ### checklist application layer
    - check the logs: sudo journalctl -f -u "SERVICE"
    - check config file syntax
+
+
+## VyOS
+
+| Task              | Command           |
+| :---              | :---              |
+| IP Configuration  | `show interfaces` |
+| Show configuration|`show`             |
+| Routing           |`show ip route`    |
+| Show log          |`show log tail`    |
+
+## Docker
+
+| Task              | Command           |
+| :---              | :---              |
+| Docker Versie  | `docker -v` |
+| Docker info |`docker info`             |
+| List Docker Containers           |`docker ps` / `docker container ls`   |
+| Start Docker Container          |`docker up`    |
+| Stop Docker Container           |`docker stop`    |
+| Kill Docker Container          |`docker kill`    |
+| Start Docker Containers met docker-compose          |`docker-compose up`    |

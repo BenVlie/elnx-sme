@@ -3,6 +3,7 @@
 - Student name: Benjamin Van Lierde
 - Github repo: <https://github.com/BenVlie/elnx-sme>
 
+## Goals
 - Setting up a samba file server and FTP server.
 - Access control to files and directories.
 - Using SELinux.

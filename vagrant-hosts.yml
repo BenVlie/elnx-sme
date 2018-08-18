@@ -38,6 +38,7 @@
 - name: pr002
   ip: 172.16.0.3
 - name: pr010
+  box: bento/fedora-28
   ip: 172.16.0.10
 - name: pr011
   ip: 172.16.0.11
