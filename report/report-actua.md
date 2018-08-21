@@ -51,27 +51,27 @@ A security auditing tool for linux that performs security scans very in depth an
 
 ## Results
 
-### index
+### - index
  The index is 67 or 68 for all tested machines. This makes sense because the machines all originate from the same box and the configurations have no focus on the security, except firewall.
 
-### Nameservers
+### - Nameservers
 Because we configured our own DNS. The lynis tool does not recognize it. Every machine that uses the self-created DNS has the warning 'couldn't find responsive Nameservers'. Lynis tested the availability and if the DNS responds to queries. An easy fix would be: use external DNS.
 
 Another DNS related issue occurs in the DNS server (pu001). The tool found the BIND version name in the banner. For security this should be hidden, an older version might have a unpatched breach and intruders can get the bind version easily.
 
 The solution here is to set the version to 'none'.
 
-### No GPG signing option.
+### - No GPG signing option.
 This is a software flaw. The software repositories are not accessible via YUM.
 
-### SMTP banner information leak
+### - SMTP banner information leak
 In this case, the banner includes the version number of the used software. This is easily spotted by an intruders recon attack.
 Changing the banner in main.cf and restarting the daemon is a possible solution.
 
-### vulnerable packages
+### - vulnerable packages
 In pu004 there are vulnerable packages, this is easily solved with the security plugin (yum-plugin-security).
 
-### PHP - expose PHP
+### - PHP - expose PHP
 This warning says the expose PHP option might be enabled. This is another vulnerability for recon attacks as the version is easily spotted.
 The easy fix is to disable expose PHP.
 
