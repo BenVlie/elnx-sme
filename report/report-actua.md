@@ -46,7 +46,7 @@ A security auditing tool for linux that performs security scans very in depth an
 ### pr001 (DHCP)
 ![pr001warnings](https://github.com/BenVlie/elnx-sme/blob/master/report/images/pr001warnings.png)
 
-![pr001index](https://github.com/BenVlie/elnx-sme/blob/master/report/images/pr001Index.png)
+![pr001index](https://github.com/BenVlie/elnx-sme/blob/master/report/images/pr001index.png)
 
 ## Resources
 
